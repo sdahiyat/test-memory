@@ -1,0 +1,26 @@
+# Project Overview
+
+## Product Description
+We are building a journaling and mood tracking web application with AI-generated reflections. This app helps users track their mental health through daily journaling and mood logging, with AI-powered insights available for premium users.
+
+## Core Features
+- **Journal entries**: Create, edit, and delete personal journal entries
+- **Mood logging**: Track daily moods and emotional states
+- **Timeline view**: Unified view of journal entries and mood history
+- **AI insights**: AI-generated reflections and insights (paid feature)
+- **Search functionality**: Search through entries and tags
+
+## User Limits
+- **Free tier**: 5 journal entries per day, 3 mood logs per day
+- **AI features**: Premium/paid feature only
+
+## Target Users
+Individuals interested in mental health tracking, self-reflection, and personal growth through journaling and mood awareness.
+
+## Key Pages
+- Landing page (`/`)
+- Dashboard overview (`/dashboard`)
+- Journal entries management (`/journal`)
+- Mood tracking interface (`/mood`)
+- Analytics and insights (`/analytics`)
+- User settings (`/settings`)

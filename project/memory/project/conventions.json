@@ -1,0 +1,45 @@
+# Development Conventions
+
+## Code Style & Patterns
+
+### Import Patterns
+- Use path mapping: `import { supabase } from '@/lib/supabase'`
+- Keep client configurations in `/lib` directory
+
+### Next.js Patterns
+- Use App Router (Next.js 14) by default
+- Server components by default unless client interaction required
+- Place pages in `src/app/` directory following the routing structure
+
+### Styling
+- Use Tailwind CSS for all styling
+- Follow utility-first approach
+- Maintain consistent spacing and color schemes
+
+### File Organization
+- Scaffold files live in `project/` subdirectory
+- New features should build on top of existing scaffold
+- Do not recreate or overwrite scaffold files unless fixing specific issues
+
+## Database Conventions
+- Use Supabase/PostgreSQL for data persistence
+- Follow the defined data models (User, Entry, MoodLog)
+- Implement Row Level Security (RLS) for user data protection
+
+## API Conventions
+- Use Supabase client for database operations
+- OpenAI client for AI-generated insights
+- Stripe client for payment processing
+- Handle errors gracefully with proper user feedback
+
+## Authentication
+- Implement Supabase Auth (to be configured)
+- Protect routes that require authentication
+- Handle authentication state properly across the app
+
+## Feature Development
+When building new features, ensure:
+- User limits are enforced (5 entries/day, 3 mood logs/day for free tier)
+- AI features are properly gated behind payment
+- Search functionality works across entries and tags
+- Timeline view integrates both entries and mood logs

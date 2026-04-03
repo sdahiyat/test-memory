@@ -1,0 +1,45 @@
+# Architecture & Tech Stack
+
+## Technology Stack
+- **Frontend**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
+- **Database**: Supabase (PostgreSQL)
+- **Authentication**: Supabase Auth
+- **AI**: OpenAI API
+- **Payments**: Stripe
+- **Deployment**: Vercel
+
+## Data Models
+
+### User
+- `id` (primary key)
+- `email` (string)
+
+### Entry
+- `id` (primary key)
+- `user_id` (foreign key)
+- `content` (text)
+- `created_at` (timestamp)
+
+### MoodLog
+- `id` (primary key)
+- `user_id` (foreign key)
+- `mood` (enum/string)
+- `created_at` (timestamp)
+
+## Key Dependencies
+- `@supabase/supabase-js` - Supabase client
+- `openai` - OpenAI API integration
+- `stripe` - Payment processing
+- `tailwindcss` - Styling framework
+
+## Project Structure
+The application uses Next.js 14 App Router with TypeScript. All scaffold files are located in the `project/` subdirectory and include:
+- Client configurations for Supabase, OpenAI, and Stripe
+- TypeScript configuration with path mapping (`@/*`)
+- Root layout and landing page
+- Global styles with Tailwind CSS
+
+## Deployment
+- **Development**: Local development environment
+- **Production**: Vercel hosting platform

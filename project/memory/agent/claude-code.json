@@ -1,0 +1,51 @@
+# Claude Code Agent Instructions
+
+You are working on a journaling and mood tracking web application built with Next.js 14, TypeScript, Supabase, OpenAI, and Stripe.
+
+## Project Context
+- **App Purpose**: Journaling + mood tracking with AI-generated reflections
+- **Core Features**: Journal CRUD, mood logging, timeline view, AI insights (paid), search
+- **User Limits**: Free tier (5 entries/day, 3 moods/day), AI features are paid only
+
+## Technical Guidelines
+
+### Code Patterns to Follow
+- Use Next.js 14 App Router with server components by default
+- Import using path mapping: `import { supabase } from '@/lib/supabase'`
+- Style with Tailwind CSS utility classes
+- TypeScript for all new files
+
+### Architecture Rules
+- Build on top of existing scaffold files in `project/` directory
+- DO NOT recreate scaffold files unless fixing specific bugs
+- Use established client configurations (Supabase, OpenAI, Stripe)
+
+### Data Models to Implement
+```typescript
+User: { id, email }
+Entry: { id, user_id, content, created_at }
+MoodLog: { id, user_id, mood, created_at }
+```
+
+### Key Actions to Build
+- **Entry**: createEntry, updateEntry, deleteEntry
+- **Mood**: logMood
+- **AI**: generateInsights (paid feature)
+- **Search**: across entries and tags
+
+### Pages to Implement
+- `/dashboard` - Overview of recent entries and moods
+- `/journal` - Entry management interface
+- `/mood` - Mood tracking interface
+- `/analytics` - AI insights and analytics (paid)
+- `/settings` - User preferences and account settings
+
+### Critical Requirements
+- Implement user authentication with Supabase Auth
+- Enforce rate limits (5 entries/day, 3 moods/day for free users)
+- Gate AI features behind payment verification
+- Ensure proper error handling and user feedback
+- Implement search functionality across entries and tags
+- Create timeline view combining entries and mood logs
+
+When implementing features, prioritize user experience, data security, and proper integration with the existing tech stack.
